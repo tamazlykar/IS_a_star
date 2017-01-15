@@ -1,3 +1,33 @@
 <h1>
   {{title}}
 </h1>
+<div class="section">
+  <input type="text" size="3" [(ngModel)]="row"> x <input type="text" size="3" [(ngModel)]="column">
+  <button (click)="onGenerateField()">Generate field</button>
+</div>
+<div class="section">
+<button (click)="onSelectStart()">Select start</button>
+<button (click)="onSelectFinish()">Select finish</button>
+<button (click)="onSelectWall()">Select walls</button>
+</div>
+<div class="section">
+  <select name="select" [(ngModel)]="selectedEvristic">
+    <option *ngFor="let evristic of evriscticsList" [value]="evristic.value">{{evristic.name}}</option>
+  </select>
+</div>
+<div class="section">
+<button (click)="onSelectFindPath()">Find Path</button>
+</div>
+
+<div id="field">
+  <div class="row" *ngFor="let row of field.getField()">
+    <app-field-element *ngFor="let element of row" [state]="element" (myState)="onClickFromElement($event)">
+    </app-field-element>
+  </div>
+</div>
+
+<div class="output">
+  <h3>Output:</h3>
+  <span>{{output}}</span>
+</div>
+

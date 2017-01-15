@@ -4,17 +4,23 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { FieldElementComponent } from './field-element/field-element.component';
+
+import { AlgorithmService } from './algorithm';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FieldElementComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    AlgorithmService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

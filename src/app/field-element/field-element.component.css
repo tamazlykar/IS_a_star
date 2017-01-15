@@ -1,0 +1,45 @@
+.field-element {
+  width: 60px;
+  height: 60px;
+  padding: 3px;
+  border: 1px solid black;
+  position: relative;
+}
+
+.start {
+  background-color: green;
+}
+
+.finish {
+  background-color: darkred;
+}
+
+.wall {
+  background-color: gray;
+}
+
+.path {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  height: 10px;
+  width: 10px;
+  background-color: red;
+}
+
+.openList {
+  border: 1px solid limegreen;
+}
+
+.closeList {
+  border: 3px solid purple;
+}
+
+.gh {
+  position: relative;
+  top: 14px;
+}
+
+.h {
+  float: right;
+}

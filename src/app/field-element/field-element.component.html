@@ -1,0 +1,18 @@
+<div class="field-element"
+  (click)="onClick()"
+  [class.start]="state.isStart"
+  [class.finish]="state.isFinish"
+  [class.wall]="state.isWall"
+  [class.openList]="state.isOpenList"
+  [class.closeList]="state.isClosedList"
+>
+  <div *ngIf="state.f">
+  <div>{{state.f.toFixed(2)}}</div>
+  <div class="gh">
+    <span>{{state.g}}</span>
+    <span class="h">{{state.h.toFixed(0)}}</span>
+  </div>
+
+  <div class="path" *ngIf="state.isPath"></div>
+  </div>
+</div>
